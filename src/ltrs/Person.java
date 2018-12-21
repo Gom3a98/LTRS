@@ -2,7 +2,6 @@ import java.util.Vector;
 
 public class Person {
 
-  private String id;
 
   private String name;
 
@@ -18,14 +17,10 @@ public class Person {
   private Vector <userServices> myuserServices;
   private Validation consists_of;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
+  Person()
+  {
+  }
+    
     public String getName() {
         return name;
     }
