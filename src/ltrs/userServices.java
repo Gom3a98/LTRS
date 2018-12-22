@@ -1,3 +1,5 @@
+
+package ltrs;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -10,7 +12,7 @@ public class userServices {
 
     private Person myPerson;
     public Vector <PostAccess>myPostAcess;
-
+    public useracces access;
   public void createUser() {
   }
 
@@ -50,7 +52,6 @@ catch (Exception e) {
   }
 
   public void SignUp() throws IOException {
-   
       String Record="";
       Record+=myPerson.getEmail();
       Record+="|";
@@ -60,11 +61,8 @@ catch (Exception e) {
       Record+="|";
       Record+=myPerson.getContact().getPhoneNumber();
       Record+="#";
-      
-       BufferedWriter writer = new BufferedWriter(new FileWriter("User.txt"));
-       writer.write(Record);
-       writer.close();
-   
+
+      access.saveUser(Record);
       
   }
 

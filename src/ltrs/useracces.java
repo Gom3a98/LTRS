@@ -1,3 +1,8 @@
+package ltrs;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class useracces {
 
     public Person myPerson;
@@ -11,7 +16,13 @@ public class useracces {
   public void deleteUser() {
   }
 
-  public void saveUser() {
+  public void saveUser(String Record) throws IOException {
+      
+       BufferedWriter writer = new BufferedWriter(new FileWriter("User.txt"));
+       writer.write(Record);
+       writer.close();
+   
+      
   }
 
 }
