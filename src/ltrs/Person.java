@@ -3,6 +3,18 @@ import java.util.Vector;
 
 public class Person {
 
+    public Person() {
+        
+        this.name ="";
+        this.Email = "";
+        this.Password = "";
+        this.contact = new Contact();
+        this.myPost = new Vector<>();
+        this.profile = new profile();
+        this.myuserServices = new Vector<>();
+        this.consists_of = new Validation();
+    }
+
 
   private String name;
 
@@ -18,9 +30,6 @@ public class Person {
   private Vector <userServices> myuserServices;
   private Validation consists_of;
 
-  Person()
-  {
-  }
     
     public String getName() {
         return name;
