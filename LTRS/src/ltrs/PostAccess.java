@@ -24,6 +24,10 @@ public class PostAccess  {
 
   public void deletePost() {
   }
+  
+ //this function is not imblemented by our leader gom3a but only by me 
+ // w n4kor elmo3edeen bto3 sw 3la elmaghod el3azem da w yareet na5od full mark b2a 
+ //kfaya el midtem
 
   public void savePost() throws IOException {
       
@@ -42,7 +46,6 @@ public class PostAccess  {
        writer.write(Record);
        writer.close();
    
-
   }
 
 }
