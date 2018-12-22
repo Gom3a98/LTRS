@@ -11,61 +11,11 @@ import ltrs.Category;
 
 public class Post {
 
-  private String PostId;
-
-  private String Description;
-
-
-  private String OwnerId;
-
+    private String PostId;
+    private String Description;
+    private String OwnerName;
     private Category myCategory;
     
-    
-
-  
-public Post search(String match) throws FileNotFoundException, IOException {	// in post class
-	   String log = "Posts.txt";
-      File file = new File(log);
-      
-      BufferedReader br = new BufferedReader(new FileReader(file)) ;
-    String line;
-   
-     String[] strArray = new String[4];
-    while ((line = br.readLine()) != null) {
-          strArray = line.split("|");
-          Post obj = new Post();
-          
-          String  CatName=strArray[1];
-          if (CatName.equals(match)){
-              Category o = new Category();
-              obj.setOwnerId(strArray[0]);
-              o.setCatName(CatName);
-              obj.setMyCategory(o);
-              obj.setPostId(strArray[2]);
-              obj.setDescription(strArray[3]);
-              br.close();
-              return obj;
-
-          }
-    
-    }
-    br.close();
-    return null;
-  
-    
-}
-
-  public void viewPosts() {
-  }
-
-  public void EditPost() {
-  }
-
-  public void DeletePost() {
-  }
-
-  public void CreatePost() {
-  }
 
     public String getPostId() {
         return "P"+i++;
@@ -83,12 +33,12 @@ public Post search(String match) throws FileNotFoundException, IOException {	// 
         this.Description = Description;
     }
 private static int i=0 ;
-    public String getOwnerId() {
-        return "o"+i++;
+    public String getName() {
+        return OwnerName;
     }
 
-    public void setOwnerId(String OwnerId) {
-        this.OwnerId = OwnerId;
+    public void setName(String OwnerId) {
+        this.OwnerName = OwnerId;
     }
 
     public Category getMyCategory() {

@@ -1,3 +1,6 @@
-o1|phone|p1|I have found a mobil phone in garden city
-o2|wallet|p2|I have found a black wallet in October city
-o1|watch|p3|I have found a golden watch in Giza square
+Gomaa&charger&P3&i have found charger at lab 7
+Tarek&keys&P1&i have found a fucken keys at City stars tody
+Khaled&ipad&P0&i have found an iPad at the school today
+ALi&frutes&P0&i have found a kilo of Banana on the bus hhh
+&sunglasses&P0&i have fuond sunglasses at my office today
+&pen&P0&i have found red pen at the table

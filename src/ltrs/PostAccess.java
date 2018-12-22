@@ -25,23 +25,11 @@ public class PostAccess  {
   public void deletePost() {
   }
 
-  public void savePost() throws IOException {
-      
-      String Record="";
-      Record+=myPost.getOwnerId();
-      Record+="|";
-      Record+=myPost.getMyCategory().getCatName();
-      Record+="|";
-      Record+=myPost.getPostId();
-      Record+="|";
-      
-      Record+=myPost.getDescription();
-       BufferedWriter writer = new BufferedWriter(new FileWriter("Posts.txt"));
-       writer.append(Record);
+  public void savePost(String Record) throws IOException {
+       BufferedWriter writer = new BufferedWriter(new FileWriter("Posts.txt",true));
+       writer.write(Record);
        writer.newLine();
        writer.close();
-   
-
   }
 
 }

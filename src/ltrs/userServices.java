@@ -28,7 +28,10 @@ public class userServices {
   public boolean SignIn(String email,String pass ) throws IOException {
       
       if (access.GetUser(email, pass))
+      {
+         
           return true;
+      }
       else return false;
   
   }
@@ -36,16 +39,15 @@ public class userServices {
   public void SignUp() throws IOException {
       String Record="";
       Record+=myPerson.getEmail();
-      Record+="|";
+      Record+="&";
       Record+=myPerson.getPassword();
-      Record+="|";
+      Record+="&";
       Record+=myPerson.getName();
-      Record+="|";
+      Record+="&";
       Record+=myPerson.getContact().getPhoneNumber();
       
 
       access.saveUser(Record);
-      
   }
 
   public void edituser() {

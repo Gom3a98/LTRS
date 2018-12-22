@@ -51,8 +51,8 @@ public boolean GetUser(String email,String pass ) throws FileNotFoundException, 
 
   public void saveUser(String Record) throws IOException {
       
-       BufferedWriter writer = new BufferedWriter(new FileWriter("User.txt"));
-       writer.append(Record);
+       BufferedWriter writer = new BufferedWriter(new FileWriter("User.txt",true));
+       writer.write(Record);
        writer.newLine();
        writer.close();
    
