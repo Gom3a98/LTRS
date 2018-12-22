@@ -10,6 +10,12 @@ import java.util.Vector;
 
 public class userServices {
 
+    public userServices() {
+        this.myPerson = new Person();
+        this.myPostAcess = new Vector<>();
+        this.access = new useracces();
+    }
+
     private Person myPerson;
     public Vector <PostAccess>myPostAcess;
     public useracces access;
@@ -19,36 +25,12 @@ public class userServices {
   public void displayUser() {
   }
 
-  public boolean SignIn(String email,String pass ) {
-      String log = "/ws/priyapan-rcd/label" + "priyanka_label_test" + ".log";
-      File file = new File(log);
-      boolean chek=false;
-      try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-    String line;
-    String em=" ";
-    String password=" ";
-    //boolean chek=false;
-     String[] strArray;
-    while ((line = br.readLine()) != null) {
-          strArray = line.split("[@#]");
-          em=strArray[0];
-          password=strArray[1];
-          if (em.equals(email)&&password.equals(pass)){
-             chek=true;
-             break;
-          }
-          else{
-              line="";
-              em="";
-              password="";
-              chek=false;
-          }
-    }
-}
-catch (Exception e) {
-    System.out.println("come inside loop to check logs.label update faild");
-}
-      return chek;
+  public boolean SignIn(String email,String pass ) throws IOException {
+      
+      if (access.GetUser(email, pass))
+          return true;
+      else return false;
+  
   }
 
   public void SignUp() throws IOException {
@@ -60,7 +42,7 @@ catch (Exception e) {
       Record+=myPerson.getName();
       Record+="|";
       Record+=myPerson.getContact().getPhoneNumber();
-      Record+="#";
+      
 
       access.saveUser(Record);
       
@@ -70,6 +52,7 @@ catch (Exception e) {
   }
 
   public void updateUserinf() {
+      
   }
 
     public Person getMyPerson() {

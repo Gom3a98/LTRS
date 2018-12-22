@@ -36,10 +36,9 @@ public class PostAccess  {
       Record+="|";
       
       Record+=myPost.getDescription();
-      Record+="\n";
-
        BufferedWriter writer = new BufferedWriter(new FileWriter("Posts.txt"));
-       writer.write(Record);
+       writer.append(Record);
+       writer.newLine();
        writer.close();
    
 
