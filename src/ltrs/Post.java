@@ -1,3 +1,4 @@
+package ltrs;
 import java.awt.Image;
 import java.util.Vector;
 import ltrs.Category;
@@ -8,11 +9,10 @@ public class Post {
 
   private String Description;
 
-  private Image Photo;
 
   private String OwnerId;
 
-    public Vector  <Category> myCategory;
+    private Category myCategory;
     
     
 
@@ -47,20 +47,20 @@ public class Post {
         this.Description = Description;
     }
 
-    public Image getPhoto() {
-        return Photo;
-    }
-
-    public void setPhoto(Image Photo) {
-        this.Photo = Photo;
-    }
-
     public String getOwnerId() {
         return OwnerId;
     }
 
     public void setOwnerId(String OwnerId) {
         this.OwnerId = OwnerId;
+    }
+
+    public Category getMyCategory() {
+        return myCategory;
+    }
+
+    public void setMyCategory(Category myCategory) {
+        this.myCategory = myCategory;
     }
 
 }

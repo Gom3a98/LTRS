@@ -1,0 +1,3 @@
+o1|phone|p1|I have found a mobil phone in garden city
+o2|wallet|p2|I have found a black wallet in October city
+o1|watch|p3|I have found a golden watch in Giza square

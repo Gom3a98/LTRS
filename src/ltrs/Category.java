@@ -5,10 +5,15 @@ import java.util.Vector;
 
 public class Category extends Post {
 
-  public String CatName;
+    public String getCatName() {
+        return CatName;
+    }
 
-  public Image CatIcon;
+    public void setCatName(String CatName) {
+        this.CatName = CatName;
+    }
 
+  private String CatName;
   
   public void viewCategoryDetails() {
   }
