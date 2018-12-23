@@ -129,29 +129,33 @@ public class MyForm extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(53, 53, 53)
-                .addGroup(SignUpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(SignUpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SignUpPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(n))
+                    .addGroup(SignUpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(n)))
                 .addGap(26, 26, 26)
-                .addGroup(SignUpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(e)
+                .addGroup(SignUpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SignUpPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(SignUpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(e)))
                 .addGap(27, 27, 27)
-                .addGroup(SignUpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(p)
+                .addGroup(SignUpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SignUpPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(SignUpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(p)))
                 .addGap(28, 28, 28)
-                .addGroup(SignUpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ph)
+                .addGroup(SignUpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SignUpPanel1Layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(SignUpPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(ph)))
                 .addGap(18, 18, 18)
                 .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
                 .addGap(27, 27, 27))
@@ -278,11 +282,16 @@ public class MyForm extends javax.swing.JFrame {
 
         jButton8.setText("MyProfile");
 
-        jButton9.setText("jButton9");
+        jButton9.setText("Edit Profile");
 
-        jButton10.setText("jButton10");
+        jButton10.setText("Delete Post");
 
         jButton11.setText("Sign out");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Wide Latin", 3, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 51, 0));
@@ -326,16 +335,16 @@ public class MyForm extends javax.swing.JFrame {
                 .addComponent(jButton10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton11)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         HomePageLayout.setVerticalGroup(
             HomePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HomePageLayout.createSequentialGroup()
-                .addGroup(HomePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(HomePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(HomePageLayout.createSequentialGroup()
                         .addGap(3, 3, 3)
                         .addComponent(SearchBar))
-                    .addComponent(Search, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Search))
                 .addGap(51, 51, 51)
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
@@ -401,7 +410,7 @@ public class MyForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 7, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 7, Short.MAX_VALUE)
                 .addGap(45, 45, 45)
                 .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
                 .addGap(28, 28, 28)
@@ -433,6 +442,8 @@ public class MyForm extends javax.swing.JFrame {
                 HomePage.setVisible(true);
                 login.setVisible(false);
                 currUser=obj.getMyPerson();
+                    MyForm f = new MyForm();
+                JOptionPane.showMessageDialog(f,"Hello Mr. "+currUser.getName());
             }
             else
             {
@@ -485,6 +496,8 @@ public class MyForm extends javax.swing.JFrame {
                 us.SignUp();
                 signup.setVisible(false);
                 HomePage.setVisible(true);
+                   MyForm f = new MyForm();
+                JOptionPane.showMessageDialog(f,"Hello Mr. "+currUser.getName());
             } catch (IOException ex) {
                 Logger.getLogger(MyForm.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -539,6 +552,11 @@ public class MyForm extends javax.swing.JFrame {
             Logger.getLogger(MyForm.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_SearchActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        currUser = null;
+        this.setVisible(true);
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     /**
      * @param args the command line arguments
